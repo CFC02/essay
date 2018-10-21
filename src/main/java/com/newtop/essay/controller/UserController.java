@@ -45,6 +45,7 @@ public class UserController {
 	@RequestMapping(value="/user")
 	public List<Map<String, Object>> queryArticleByUserId(String userId) {
 		User user=new User();
+		//设置用户id
 		user.setUserId(userId);
 		List<Map<String, Object>> list=articleService.findAll(user);
 		return list;
